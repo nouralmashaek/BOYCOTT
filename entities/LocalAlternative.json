@@ -1,0 +1,83 @@
+{
+  "name": "LocalAlternative",
+  "type": "object",
+  "properties": {
+    "name_ar": {
+      "type": "string",
+      "description": "Alternative product name in Arabic"
+    },
+    "name_en": {
+      "type": "string",
+      "description": "Alternative product name in English"
+    },
+    "brand": {
+      "type": "string",
+      "description": "Brand name"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "food",
+        "beverages",
+        "personal_care",
+        "cleaning",
+        "snacks",
+        "dairy",
+        "other"
+      ],
+      "description": "Product category"
+    },
+    "price_lyd": {
+      "type": "number",
+      "description": "Price in Libyan Dinar"
+    },
+    "health_score": {
+      "type": "number",
+      "description": "Health score from 1 to 10"
+    },
+    "is_libyan": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether the product is locally made in Libya"
+    },
+    "country_of_origin": {
+      "type": "string",
+      "description": "Country of origin"
+    },
+    "replaces_product_id": {
+      "type": "string",
+      "description": "ID of the boycotted product this replaces"
+    },
+    "replaces_category": {
+      "type": "string",
+      "enum": [
+        "food",
+        "beverages",
+        "personal_care",
+        "cleaning",
+        "snacks",
+        "dairy",
+        "other"
+      ],
+      "description": "Category of products this can replace"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Product image URL"
+    },
+    "description_ar": {
+      "type": "string",
+      "description": "Description in Arabic"
+    },
+    "available_in": {
+      "type": "string",
+      "description": "Where to find this product"
+    }
+  },
+  "required": [
+    "name_ar",
+    "category",
+    "price_lyd",
+    "health_score"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name_ar": {
+      "type": "string",
+      "description": "Product name in Arabic"
+    },
+    "name_en": {
+      "type": "string",
+      "description": "Product name in English"
+    },
+    "barcode": {
+      "type": "string",
+      "description": "Product barcode/QR code value"
+    },
+    "brand": {
+      "type": "string",
+      "description": "Brand name"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "food",
+        "beverages",
+        "personal_care",
+        "cleaning",
+        "snacks",
+        "dairy",
+        "other"
+      ],
+      "description": "Product category"
+    },
+    "is_boycotted": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether the product is boycotted"
+    },
+    "boycott_reason": {
+      "type": "string",
+      "description": "Reason for boycott in Arabic"
+    },
+    "country_of_origin": {
+      "type": "string",
+      "description": "Country of origin"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Product image URL"
+    }
+  },
+  "required": [
+    "name_ar",
+    "barcode",
+    "is_boycotted"
+  ]
+}
